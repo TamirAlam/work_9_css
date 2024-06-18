@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100vw;
+      height: 80vh;
+      background-color: rgb(243, 243, 87);
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .main {
+      width: 80vw;
+      height: 80vh;
+      margin: 5vh auto 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main div {
+      border: 5px solid black;
+      width: 45%;
+      height: 100%;
+      overflow: hidden; /* Added to ensure content doesn't overflow */
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      /* object-fit: cover; */
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      padding: 2em;
+      overflow: auto; /* Added to handle overflow if necessary */
+    }
+
+    .content h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .content p {
+      font-size: 1em;
+      line-height: 1.5em;
+      padding: 0 1em; /* Added padding to ensure text doesn't touch the border */
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .main {
+        flex-direction: column;
+        width: 90vw;
+      }
+
+      .main div {
+        width: 100%;
+        height: auto;
+      }
+
+      .content {
+        padding: 1em;
+      }
+
+      .content h1 {
+        font-size: 2em;
+      }
+
+      .content p {
+        font-size: 0.6em;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .main {
+        width: 100vw;
+        height: auto;
+        margin: 2vh auto;
+      }
+
+      .main div {
+        height: auto;
+      }
+
+      .content h1 {
+        font-size: 1.3em;
+      }
+
+      .content p {
+        font-size: 0.8em;
+      }
+    }
+    .content span{
+      margin: 10px;
+    }
+    .content button{
+      background-color: black;
+      color:white
+    }
+    .large-button {
+        font-size: 1em;
+        padding: 0.5em 1.4em;
+        white-space: nowrap; /* Prevent text from wrapping */
+        display: inline-block;
+        margin:10px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="container"></div>
+  <div class="main">
+    <div class="image">
+      <img src="https://images01.nicepagecdn.com/page/11/02/css-template-preview-110226.webp" alt="Certified Coffee Courses">
+    </div>
+    <div class="content">
+      <h1>Certified Coffee Courses</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eligendi unde nihil accusamus officia similique nemo quos
+        iste minima fugit.</p>
+        <span>Image from freepik</span>
+        <button class="large-button">Learn More</button>
+    </div>
+  </div>
+</body>
+
+</html>
